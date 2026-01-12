@@ -181,7 +181,10 @@ const App = () => {
   const openForm = () => setIsFormOpen(true);
   const closeForm = () => setIsFormOpen(false);
   
+  // Update document title and handle scroll
   useEffect(() => {
+    document.title = "Metalmetre - The Operating System for Global Metal Trade";
+    
     const handleScroll = () => { setIsScrolled(window.scrollY > 20); };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
